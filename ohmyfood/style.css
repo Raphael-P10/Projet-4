@@ -4,4 +4,12 @@ body {
 
 h1, h2, h3 {
   font-family: "Shrikhand", sans-serif;
+}
+
+.bg-dark-grey {
+  background-color: #EAEAEA;
+}
+
+.bg-light-grey {
+  background-color: #F6F6F6;
 }/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,8 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$dark-grey: #EAEAEA;
+$light-grey: #F6F6F6;
 
 body {
     font-family: "Roboto", sans-serif;
@@ -11,3 +13,10 @@ h1, h2, h3 {
     font-family: "Shrikhand", sans-serif;   
 }
 
+.bg-dark-grey {
+    background-color: $dark-grey;
+}
+
+.bg-light-grey {
+    background-color: $light-grey;
+}
