@@ -183,7 +183,7 @@ footer {
 /* CODE POUR LES MENUS  */
 
 .img-menu {
-    object-fit:cover ;
+    object-fit: cover;
     height: 275px;
     width: 100%;
 
@@ -212,6 +212,17 @@ footer {
         margin-bottom: 20px;
         margin-top: 40px;
         position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: $tertiary-color;
+            width: 40px;
+            height: 3px;
+            left: 0;
+            bottom: -8px;
+
+        }
 
     }
 
