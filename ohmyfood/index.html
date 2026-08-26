@@ -19,37 +19,40 @@
 </head>
 
 <body>
-
+    <div class="loader">
+        <div class="circle"></div>
+    </div>
     <header>
-        <h1>ohmyfood</h1>
-        <p class="bg-dark-grey text-center">Paris, Bellevile</p>
+        <h1 class="shadow-title">ohmyfood</h1>
+        <p class="bg-dark-grey text-center shadow-ville"> <i class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
     </header>
 
-    <main>
+    <main class="main-homepage">
         <section class="bg-light-grey">
-            <h2 class="text-center">Réservez le menu qui vous convient</h2>
-            <h3 class="text-center">Découvrez des restaurants d'exception, sélectionnés par nos soins</h3>
+            <h2 class="text-center padding-h2">Réservez le menu qui vous convient</h2>
+            <p class="text-center padding-p">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
             <button class="button">Explorer nos restaurants</button>
         </section>
 
-        <section class="fonctionnement">
+        <section class="fonctionnement padding-left-right">
             <h2>Fonctionnement</h2>
-            <div class="etape">
-                <span class="numero">1</span>
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <p>Choisissez un restaurant</p>
+            <div class="desktop-row">
+                <article class="etape">
+                    <span class="numero">1</span>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>Choisissez un restaurant</p>
+                </article>
+                <article class="etape">
+                    <span class="numero">2</span>
+                    <i class="fa-solid fa-list"></i>
+                    <p>Composez votre menu</p>
+                </article>
+                <article class="etape">
+                    <span class="numero">3</span>
+                    <i class="fa-solid fa-store"></i>
+                    <p>Dégustez au restaurant</p>
+                </article>
             </div>
-            <div class="etape">
-                <span class="numero">2</span>
-                <i class="fa-solid fa-list"></i>
-                <p>Composez votre menu</p>
-            </div>
-            <div class="etape">
-                <span class="numero">3</span>
-                <i class="fa-solid fa-store"></i>
-                <p>Choisissez un restaurant</p>
-            </div>
-
 
 
 
@@ -57,63 +60,69 @@
 
         </section>
 
-        <section class="restaurants bg-light-grey">
+        <section class="restaurants bg-light-grey padding-left-right">
             <h2>Restaurants</h2>
-
-            <article class="card-accueil">
-                <img src="Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                    alt="Ménilmontant">
-                <div class="space-between">
-                    <div class="text">
-                        <h3 class="card-title">La palette du goût</h3>
-                        <p>Ménilmontant</p>
+            <div class="restaurants-grid">
+                <article class="card-accueil">
+                    <img src="Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="Ménilmontant">
+                    <div class="space-between">
+                        <div class="text">
+                            <h3 class="card-title">La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart hovered"></i>
+                        </div>
                     </div>
-                    <button class="heart">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-            </article>
+                </article>
 
-            <article class="card-accueil">
-                <img src="Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Charonne">
-                <div class="space-between">
-                    <div class="text">
-                        <h3 class="card-title">La note enchantée</h3>
-                        <p>Charonne</p>
+                <article class="card-accueil">
+                    <img src="Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                        alt="Charonne">
+                    <div class="space-between">
+                        <div class="text">
+                            <h3 class="card-title">La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart hovered"></i>
+                        </div>
                     </div>
-                    <button class="heart">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-            </article>
+                </article>
 
-            <article class="card-accueil">
-                <img src="Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                    alt="Cité rouge">
-                <div class="space-between">
-                    <div class="text">
-                        <h3 class="card-title">À la française</h3>
-                        <p>Cité rouge</p>
+                <article class="card-accueil">
+                    <img src="Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                        alt="Cité rouge">
+                    <div class="space-between">
+                        <div class="text">
+                            <h3 class="card-title">À la française</h3>
+                            <p>Cité rouge</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart hovered"></i>
+                        </div>
                     </div>
-                    <button class="heart">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-            </article>
+                </article>
 
-            <article class="card-accueil">
-                <img src="Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                    alt="Folie-Méricourt">
-                <div class="space-between">
-                    <div class="text">
-                        <h3 class="card-title">Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
+                <article class="card-accueil">
+                    <img src="Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                        alt="Folie-Méricourt">
+                    <div class="space-between">
+                        <div class="text">
+                            <h3 class="card-title">Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart hovered"></i>
+                        </div>
                     </div>
-                    <button class="heart">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                </div>
-            </article>
+                </article>
+            </div>
         </section>
     </main>
     <footer>

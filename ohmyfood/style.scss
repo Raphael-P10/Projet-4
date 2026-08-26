@@ -21,17 +21,60 @@ h1 {
     text-align: center;
 }
 
+header {
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px 0;
+    }
+}
+
 .bg-dark-grey {
     background-color: $dark-grey;
 }
 
 .bg-light-grey {
     background-color: $light-grey;
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+
+.shadow-title {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.shadow_ville {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .text-center {
     text-align: center;
 }
+
+.padding-p {
+    padding: 0 20px;
+}
+
+.padding-h2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.main-homepage {
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+
 
 .button {
     background: linear-gradient(#9356DC, #FF79DA);
@@ -48,14 +91,12 @@ h1 {
 }
 
 .fonctionnement {
-    padding: 30px 15px;
+    padding: 45px 15px;
 
     h2 {
         margin-bottom: 20px;
     }
 }
-
-
 
 
 .etape {
@@ -75,8 +116,14 @@ h1 {
 .restaurants {
     display: flex;
     flex-direction: column;
-    padding: 40px 15px;
+    padding: 45px 15px;
     gap: 15px;
+
+    .restaurants-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
 
     .card-accueil {
         display: flex;
@@ -89,6 +136,7 @@ h1 {
             font-size: 18px;
             font-weight: 700;
             margin-top: 10px;
+            margin-bottom: 5px;
         }
 
         p {
@@ -108,7 +156,7 @@ h1 {
 
         .text {
             padding-left: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
 
@@ -129,7 +177,8 @@ h1 {
 }
 
 .heart {
-    padding-right: 10px;
+    padding-right: 45px;
+    padding-top: 20px;
     font-size: 22px;
     position: relative;
 
@@ -161,6 +210,8 @@ footer {
     background-color: #353535;
     padding-left: 25px;
     color: white;
+    padding-top: 15px;
+    padding-bottom: 20px;
 
     p {
         font-family: "Shrikhand", sans-serif;
@@ -176,9 +227,48 @@ footer {
 
     ul {
         list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+
+        i {
+            margin-right: 10px;
+        }
     }
 }
 
+.loader {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    animation: hide-loader 0s 2s forwards;
+    z-index: 20;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid $primary-color;
+    border-top-color: $secondary-color;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hide-loader {
+    to {
+        visibility: hidden;
+    }
+}
 
 /* CODE POUR LES MENUS  */
 
@@ -300,4 +390,68 @@ footer {
             transform: translateX(-60px);
         }
     }
+}
+
+.menu-animation {
+    opacity: 0;
+    animation: apparition 0.8s ease forwards;
+}
+
+@keyframes apparition {
+    to {
+        opacity: 1;
+    }
+}
+
+.entrees {
+    animation-delay: 0.2s;
+}
+
+.plats {
+    animation-delay: 0.6s;
+}
+
+.desserts {
+    animation-delay: 1s;
+}
+
+/* DESKTOP  */
+
+@media (min-width: 1024px) {
+    .desktop-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+
+    .restaurants {
+        .restaurants-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 80px;
+            row-gap: 40px;
+        }
+    }
+
+    .padding-left-right {
+        padding: 0 200px;
+    }
+
+    .etape {
+        width: calc(100%/3);
+    }
+
+    .main-container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+
+
+
 }
