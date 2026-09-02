@@ -19,6 +19,27 @@ header p {
   font-weight: 500;
   padding: 15px 0;
 }
+header .header-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  padding: 10px 0;
+}
+header i {
+  font-size: 20px;
+}
+header .back {
+  position: absolute;
+  left: 20px;
+}
+header a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
 
 .bg-dark-grey {
   background-color: #EAEAEA;
@@ -31,10 +52,14 @@ header p {
 }
 
 .shadow-title {
+  position: relative;
+  z-index: 21;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.shadow_ville {
+.shadow-ville {
+  position: relative;
+  z-index: 20;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -74,16 +99,37 @@ header p {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  transition: opacity 0.3s ease;
+}
+.button:hover {
+  opacity: 0.8;
 }
 
 .fonctionnement {
   padding: 45px 15px;
 }
+.fonctionnement .fa-store {
+  color: #9356DC;
+}
 .fonctionnement h2 {
   margin-bottom: 20px;
 }
 
+.numero {
+  position: relative;
+  background-color: #9356DC;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 30px;
+}
+
 .etape {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -102,6 +148,10 @@ header p {
   padding: 45px 15px;
   gap: 15px;
 }
+.restaurants a {
+  text-decoration: none;
+  color: inherit;
+}
 .restaurants .restaurants-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -113,6 +163,7 @@ header p {
   border-radius: 15px;
   background-color: white;
   overflow: hidden;
+  position: relative;
 }
 .restaurants .card-accueil .card-title {
   font-size: 18px;
@@ -130,6 +181,17 @@ header p {
   width: 100%;
   height: 230px;
 }
+.restaurants .card-accueil .nouveau {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+}
 .restaurants .card-accueil .text {
   padding-left: 10px;
   margin-bottom: 15px;
@@ -142,8 +204,14 @@ header p {
 
 .space {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
+}
+
+.heart-container {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
 }
 
 .heart {
@@ -203,7 +271,7 @@ footer ul i {
   align-items: center;
   background-color: white;
   animation: hide-loader 0s 2s forwards;
-  z-index: 20;
+  z-index: 50;
 }
 
 .circle {
@@ -241,10 +309,15 @@ footer ul i {
   z-index: 10;
   position: relative;
 }
+.main-container .fa-heart {
+  position: absolute;
+  top: 0px;
+}
 .main-container h2 {
   font-family: "Shrikhand", sans-serif;
   font-size: 28px;
   font-weight: 400;
+  margin-left: 5px;
 }
 .main-container h3 {
   font-family: "Roboto", sans-serif;
@@ -279,6 +352,7 @@ footer ul i {
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 0;
 }
 .card .card-title {
   font-size: 18px;
@@ -349,6 +423,12 @@ footer ul i {
 
 /* DESKTOP  */
 @media (min-width: 1024px) {
+  .shadow-ville {
+    box-shadow: none;
+  }
+  .shadow-title {
+    box-shadow: none;
+  }
   .desktop-row {
     display: flex;
     flex-direction: row;
@@ -363,7 +443,8 @@ footer ul i {
     row-gap: 40px;
   }
   .padding-left-right {
-    padding: 0 200px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
   .etape {
     width: 33.3333333333%;
@@ -372,5 +453,37 @@ footer ul i {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .main-container .space {
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container h2 {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+  }
+  footer p {
+    margin-right: 20px;
+    margin-left: 50px;
+    align-content: center;
+    margin-top: 10px;
+  }
+  footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 70px;
+    margin-top: 20px;
+  }
+  footer ul i {
+    margin-right: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
